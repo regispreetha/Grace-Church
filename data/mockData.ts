@@ -23,7 +23,7 @@ export const sermons: Sermon[] = [
     notesUrl: 'https://example.com/notes1.pdf',
     scripture: 'Ephesians 3:14-21',
     description: 'Discover how to walk in the power of the Holy Spirit and experience the fullness of God\'s strength in your daily life.',
-    thumbnail: '/artifacts/sunday_service_worship_1763537430650.png',
+    thumbnail: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800&q=80',
     livestream: true,
   },
   {
@@ -37,7 +37,7 @@ export const sermons: Sermon[] = [
     notesUrl: 'https://example.com/notes2.pdf',
     scripture: 'Philippians 2:1-11',
     description: 'Learn what it means to serve others with humility and love, following the example of Jesus Christ.',
-    thumbnail: '/artifacts/sunday_service_worship_1763537430650.png',
+    thumbnail: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&q=80',
     livestream: false,
   },
   {
@@ -51,7 +51,7 @@ export const sermons: Sermon[] = [
     notesUrl: 'https://example.com/notes3.pdf',
     scripture: 'Isaiah 41:10',
     description: 'Find courage and peace in God\'s promises as we explore what it means to trust Him in times of fear and uncertainty.',
-    thumbnail: '/artifacts/sunday_service_worship_1763537430650.png',
+    thumbnail: 'https://images.unsplash.com/photo-1501592115130-ef67f0e19ebe?w=800&q=80',
     livestream: true,
   },
 ];
@@ -65,7 +65,7 @@ export const events: Event[] = [
     location: 'Main Sanctuary',
     description: 'Join us for a time of worship, fellowship, and hearing God\'s Word. All are welcome!',
     category: 'Worship',
-    imageUrl: '/artifacts/sunday_service_worship_1763537430650.png',
+    imageUrl: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&q=80',
   },
   {
     id: '2',
@@ -75,7 +75,7 @@ export const events: Event[] = [
     location: 'Fellowship Hall',
     description: 'Dive deeper into God\'s Word with our community Bible study. A great opportunity for growth and fellowship.',
     category: 'Study',
-    imageUrl: '/artifacts/bible_study_warmth_1763537438596.png',
+    imageUrl: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&q=80',
   },
   {
     id: '3',
@@ -85,7 +85,7 @@ export const events: Event[] = [
     location: 'Youth Room',
     description: 'A dynamic gathering for teens to study the Bible, ask questions, and build lasting friendships.',
     category: 'Youth',
-    imageUrl: '/artifacts/teens_bible_youth_1763542826529.png',
+    imageUrl: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80',
     leadBy: 'Nancy Anand',
   },
 ];
@@ -99,7 +99,7 @@ export const ministries: Ministry[] = [
     contactEmail: 'kids@gracecovenant.org',
     meetingDay: 'Sunday',
     meetingTime: '9:00 AM',
-    imageUrl: '/artifacts/kids_bible_classroom_1763537449346.png',
+    imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
   },
   {
     id: '2',
@@ -109,7 +109,7 @@ export const ministries: Ministry[] = [
     contactEmail: 'youth@gracecovenant.org',
     meetingDay: 'Sunday',
     meetingTime: '9:00 AM',
-    imageUrl: '/artifacts/teens_bible_youth_1763542826529.png',
+    imageUrl: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80',
   },
   {
     id: '3',
@@ -119,7 +119,7 @@ export const ministries: Ministry[] = [
     contactEmail: 'groups@gracecovenant.org',
     meetingDay: 'Various',
     meetingTime: 'Various',
-    imageUrl: '/artifacts/bible_study_warmth_1763537438596.png',
+    imageUrl: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&q=80',
   },
 ];
 
@@ -129,27 +129,27 @@ export const staff: Staff[] = [
     name: 'Pastor Santhosh',
     role: 'Lead Pastor',
     bio: 'Pastor Santhosh has been serving in ministry for over 15 years with a heart for teaching God\'s Word and shepherding His people. He and his family are committed to seeing lives transformed through the gospel.',
-    imageUrl: '/artifacts/pastor_santhosh.png',
+    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
   },
   {
     id: '2',
     name: 'Lisa Santhosh',
     role: 'Praise & Worship Leader',
     bio: 'Lisa leads our worship team with passion and excellence, creating an atmosphere where people can freely worship and encounter God\'s presence.',
-    imageUrl: '/artifacts/pastor_santhosh.png',
+    imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
   },
   {
     id: '3',
     name: 'Sunitha',
     role: 'Media Director',
     bio: 'Sunitha oversees our media and communications, ensuring that our message reaches people both in person and online with clarity and creativity.',
-    imageUrl: '/artifacts/pastor_santhosh.png',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
   },
   {
     id: '4',
     name: 'Nancy Anand',
     role: 'Youth Pastor',
     bio: 'Nancy is passionate about investing in the next generation, creating safe spaces for youth to explore their faith and grow in their relationship with Jesus.',
-    imageUrl: '/artifacts/pastor_santhosh.png',
+    imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
   },
 ];
