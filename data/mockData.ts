@@ -8,7 +8,7 @@ export const churchInfo: ChurchInfo = {
   serviceTime: 'Sundays 9:00 AM - 10:30 AM',
   facebook: 'https://facebook.com/gracecovenantchurch',
   instagram: 'https://instagram.com/gracecovenantchurch',
-  youtube: 'https://youtube.com/@gracecovenantchurchsydney',
+  youtube: 'https://www.youtube.com/@gracecovenantchurchsydney/videos',
 };
 
 export const sermons: Sermon[] = [

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { sermons } from '@/data/mockData';
+import { sermons, churchInfo } from '@/data/mockData';
 import { PlayIcon } from '@/components/icons';
 
 const SermonCard: React.FC<{ sermon: typeof sermons[0] }> = ({ sermon }) => (
@@ -77,9 +77,18 @@ const SermonsPage: React.FC = () => {
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-6 animate-fade-in-down">
             Sermons
           </h1>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto animate-fade-in-up">
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto mb-8 animate-fade-in-up">
             Grow in your faith through biblical teaching that's practical, relevant, and transformative.
           </p>
+          <a
+            href={churchInfo.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-4 bg-brand-gold text-brand-dark-blue font-semibold rounded-full shadow-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300 uppercase text-sm tracking-wide animate-fade-in"
+          >
+            <PlayIcon className="w-5 h-5 mr-2" />
+            VIEW ALL SERMONS ON YOUTUBE
+          </a>
         </div>
       </section>
 
