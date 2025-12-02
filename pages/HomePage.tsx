@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-dark-blue via-brand-navy to-brand-blue overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-brand-dark-blue via-brand-navy to-brand-blue overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-brand-gold rounded-full mix-blend-multiply filter blur-xl animate-gentle-float" />
@@ -19,25 +19,28 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 animate-fade-in-down">
-            Welcome to<br />
-            <span className="text-brand-gold">Grace Covenant Church</span>
+          <p className="text-brand-gold font-semibold text-sm md:text-base tracking-widest uppercase mb-4 animate-fade-in-down">
+            WELCOME TO
+          </p>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 animate-fade-in-down leading-tight">
+            Grace Covenant<br />
+            Church
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto animate-fade-in-up">
             A place to belong, believe, and become.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Link
-              to="/about"
-              className="px-8 py-4 bg-brand-gold text-brand-dark-blue font-semibold rounded-lg shadow-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300"
+              to="/contact"
+              className="px-8 py-4 bg-white text-brand-dark-blue font-semibold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300 uppercase text-sm tracking-wide"
             >
-              Learn More About Us
+              PLAN YOUR VISIT
             </Link>
             <Link
-              to="/contact"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand-dark-blue hover:scale-105 transition-all duration-300"
+              to="/sermons"
+              className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-brand-dark-blue hover:scale-105 transition-all duration-300 uppercase text-sm tracking-wide"
             >
-              Plan a Visit
+              WATCH LATEST
             </Link>
           </div>
         </div>
@@ -51,69 +54,97 @@ const HomePage: React.FC = () => {
       {/* Welcome Section */}
       <section className="py-20 bg-brand-cream">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark-blue mb-6 animate-fade-in-up">
               Welcome Home
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              We're so glad you're here! Grace Covenant Church is a community of believers
-              passionate about knowing God and making Him known. Whether you're exploring faith
-              for the first time or have walked with Jesus for years, there's a place for you here.
+            <p className="text-lg text-gray-700 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              We are a community of believers passionate about encountering God, connecting with
+              others, and transforming our world. Whether you're new to church or have been a
+              Christian for years, you have a place here.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              Join us this Sunday as we gather to worship, grow, and serve together.
-            </p>
+          </div>
+
+          {/* Three Pillars: Belong, Believe, Become */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="text-center group">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-brand-gold">
+                <UsersIcon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                Belong
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Find your community and build lasting friendships in a place where everyone is welcomed.
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-brand-gold">
+                <BookOpenIcon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                Believe
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Grow in your faith through powerful biblical teaching and authentic worship.
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-brand-gold">
+                <HeartIcon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                Become
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Transform into who God created you to be and make a lasting impact in the world.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Latest Sermon */}
       {latestSermon && (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-brand-dark-blue via-brand-navy to-brand-blue">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark-blue mb-4">
-                Latest Message
-              </h2>
-              <p className="text-lg text-gray-600">
-                Catch up on our most recent sermon
-              </p>
-            </div>
-            <div className="max-w-5xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-xl-warm overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="relative group overflow-hidden">
-                    <img
-                      src={latestSermon.thumbnail}
-                      alt={latestSermon.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
-                      <Link
-                        to={`/sermons/${latestSermon.id}`}
-                        className="w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center hover:bg-yellow-500 hover:scale-110 transition-all duration-300 shadow-lg"
-                      >
-                        <PlayIcon className="w-10 h-10 text-white ml-1" />
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="p-8 flex flex-col justify-center">
-                    <p className="text-brand-gold font-semibold mb-2">{latestSermon.series}</p>
-                    <h3 className="text-3xl font-serif font-bold text-brand-dark-blue mb-3">
-                      {latestSermon.title}
-                    </h3>
-                    <p className="text-gray-600 mb-2">
-                      <span className="font-semibold">{latestSermon.speaker}</span> • {latestSermon.date}
-                    </p>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
-                      {latestSermon.description}
-                    </p>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="text-white">
+                  <p className="text-brand-gold font-semibold uppercase tracking-wider text-sm mb-4">
+                    LATEST MESSAGE
+                  </p>
+                  <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
+                    {latestSermon.title}
+                  </h2>
+                  <p className="text-gray-300 mb-4">
+                    with {latestSermon.speaker}
+                  </p>
+                  <p className="text-gray-200 mb-8 leading-relaxed">
+                    {latestSermon.description}
+                  </p>
+                  <Link
+                    to={`/sermons/${latestSermon.id}`}
+                    className="inline-flex items-center px-8 py-3 bg-brand-gold text-brand-dark-blue font-semibold rounded-full hover:bg-yellow-500 hover:scale-105 transition-all duration-300 uppercase text-sm tracking-wide"
+                  >
+                    WATCH NOW
+                    <ChevronRightIcon className="w-5 h-5 ml-2" />
+                  </Link>
+                </div>
+                <div className="relative group overflow-hidden rounded-2xl">
+                  <img
+                    src={latestSermon.thumbnail}
+                    alt={latestSermon.title}
+                    className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500 rounded-2xl"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center rounded-2xl">
                     <Link
                       to={`/sermons/${latestSermon.id}`}
-                      className="inline-flex items-center text-brand-gold hover:text-brand-dark-blue font-semibold transition-colors duration-300"
+                      className="w-20 h-20 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg"
                     >
-                      Watch Now
-                      <ChevronRightIcon className="w-5 h-5 ml-2" />
+                      <PlayIcon className="w-10 h-10 text-brand-dark-blue ml-1" />
                     </Link>
                   </div>
                 </div>
@@ -123,109 +154,96 @@ const HomePage: React.FC = () => {
         </section>
       )}
 
-      {/* Ministries Highlight */}
-      <section className="py-20 bg-gradient-to-br from-brand-blue to-brand-navy">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-              Get Connected
-            </h2>
-            <p className="text-xl text-gray-200">
-              Find your place in our community
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                title: 'GraceKids',
-                description: 'A fun, safe place for children to learn about Jesus and grow in faith.',
-                icon: UsersIcon,
-                link: '/ministries',
-              },
-              {
-                title: 'Youth Ministry',
-                description: 'Empowering the next generation to live boldly for Christ.',
-                icon: BookOpenIcon,
-                link: '/ministries',
-              },
-              {
-                title: 'Small Groups',
-                description: 'Connect deeply with others through fellowship and Bible study.',
-                icon: HeartIcon,
-                link: '/ministries',
-              },
-            ].map((ministry, index) => (
-              <Link
-                key={index}
-                to={ministry.link}
-                className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/20 hover:scale-105 transition-all duration-300 group"
-              >
-                <ministry.icon className="w-12 h-12 text-brand-gold mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-2xl font-serif font-bold text-white mb-3">
-                  {ministry.title}
-                </h3>
-                <p className="text-gray-200 leading-relaxed mb-4">
-                  {ministry.description}
-                </p>
-                <span className="inline-flex items-center text-brand-gold font-semibold">
-                  Learn More
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
+      {/* Join Us Section */}
       <section className="py-20 bg-brand-cream">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark-blue mb-4">
-              Upcoming Events
+              Join Us
             </h2>
-            <p className="text-lg text-gray-600">
-              Join us for these exciting gatherings
+            <p className="text-lg text-gray-700">
+              Connect with our community through our regular services and ministries.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
-            {upcomingEvents.map((event) => (
-              <Link
-                key={event.id}
-                to={`/events/${event.id}`}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="relative overflow-hidden h-48">
-                  <img
-                    src={event.imageUrl}
-                    alt={event.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 right-4 bg-brand-gold text-brand-dark-blue px-3 py-1 rounded-full text-sm font-semibold">
-                    {event.category}
-                  </div>
+            {/* Sunday Service Card */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="relative overflow-hidden h-64">
+                <img
+                  src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&h=600&fit=crop"
+                  alt="Sunday Service"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                  Sunday Service
+                </h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  Join us every Sunday for worship, fellowship, and powerful biblical teaching. Experience God's presence as we gather together to worship and learn from His Word.
+                </p>
+                <div className="flex items-center text-brand-gold text-sm mb-2">
+                  <CalendarIcon className="w-4 h-4 mr-2" />
+                  <span className="font-semibold">Sundays 9:00 AM - 10:30 AM</span>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-serif font-bold text-brand-dark-blue mb-2">
-                    {event.title}
-                  </h3>
-                  <div className="flex items-center text-gray-600 mb-2 text-sm">
-                    <CalendarIcon className="w-4 h-4 mr-2 text-brand-gold" />
-                    {event.date} • {event.time}
-                  </div>
-                  <p className="text-gray-700 line-clamp-2">
-                    {event.description}
-                  </p>
+                <p className="text-gray-600 text-sm">Led by Pastor Santhosh</p>
+              </div>
+            </div>
+
+            {/* Bible Study Card */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="relative overflow-hidden h-64">
+                <img
+                  src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop"
+                  alt="Bible Study"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                  Bible Study
+                </h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  Dive deeper into God's Word with our Bible Study sessions. A time to study scripture, share insights, and grow together in faith and understanding.
+                </p>
+                <div className="flex items-center text-brand-gold text-sm mb-2">
+                  <CalendarIcon className="w-4 h-4 mr-2" />
+                  <span className="font-semibold">1st and 3rd Friday 7:30 PM</span>
                 </div>
-              </Link>
-            ))}
+                <p className="text-gray-600 text-sm">Led by Pastor Santhosh</p>
+              </div>
+            </div>
+
+            {/* Kids Bible Card */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="relative overflow-hidden h-64">
+                <img
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop"
+                  alt="Kids Bible"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                  Kids Bible
+                </h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  Kids Bible provides an engaging and age-appropriate environment for children to learn about Jesus and grow in their faith. Led with love and creativity to inspire the next generation.
+                </p>
+                <div className="flex items-center text-brand-gold text-sm mb-2">
+                  <CalendarIcon className="w-4 h-4 mr-2" />
+                  <span className="font-semibold">Saturdays 6:30 PM</span>
+                </div>
+                <p className="text-gray-600 text-sm">Led by Nancy Anand</p>
+              </div>
+            </div>
           </div>
           <div className="text-center">
             <Link
-              to="/events"
-              className="inline-flex items-center px-6 py-3 bg-brand-gold text-brand-dark-blue font-semibold rounded-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300"
+              to="/ministries"
+              className="inline-flex items-center px-8 py-3 bg-brand-dark-blue text-white font-semibold rounded-full hover:bg-brand-navy hover:scale-105 transition-all duration-300 uppercase text-sm tracking-wide"
             >
-              View All Events
+              EXPLORE ALL MINISTRIES
               <ChevronRightIcon className="w-5 h-5 ml-2" />
             </Link>
           </div>
@@ -236,65 +254,65 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Link
-              to="/about"
-              className="relative overflow-hidden rounded-2xl shadow-xl group h-80"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-blue to-brand-navy" />
-              <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
-                <UsersIcon className="w-16 h-16 text-brand-gold mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-2xl font-serif font-bold text-white mb-3">
-                  Meet Our Team
-                </h3>
-                <p className="text-gray-200 mb-6">
-                  Get to know the people leading our church family.
-                </p>
-                <span className="text-brand-gold font-semibold flex items-center">
-                  Learn More
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
+            {/* New Here Card */}
+            <div className="bg-brand-cream rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 group">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-brand-gold">
+                <UsersIcon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
               </div>
-            </Link>
+              <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                New Here?
+              </h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                We'd love to meet you! Plan your first visit and discover what to expect.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center text-brand-gold hover:text-brand-dark-blue font-semibold transition-colors duration-300"
+              >
+                Learn More
+                <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
 
-            <Link
-              to="/give"
-              className="relative overflow-hidden rounded-2xl shadow-xl group h-80"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-teal to-brand-blue" />
-              <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
-                <HeartIcon className="w-16 h-16 text-brand-gold mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-2xl font-serif font-bold text-white mb-3">
-                  Give Online
-                </h3>
-                <p className="text-gray-200 mb-6">
-                  Support our mission through your generous giving.
-                </p>
-                <span className="text-brand-gold font-semibold flex items-center">
-                  Give Now
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
+            {/* Give Online Card */}
+            <div className="bg-brand-cream rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 group">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-brand-gold">
+                <HeartIcon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
               </div>
-            </Link>
+              <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                Give Online
+              </h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Partner with us in spreading the Gospel and making a difference in our community.
+              </p>
+              <Link
+                to="/give"
+                className="inline-flex items-center text-brand-gold hover:text-brand-dark-blue font-semibold transition-colors duration-300"
+              >
+                Learn More
+                <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
 
-            <Link
-              to="/contact"
-              className="relative overflow-hidden rounded-2xl shadow-xl group h-80"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-navy to-brand-dark-blue" />
-              <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
-                <BookOpenIcon className="w-16 h-16 text-brand-gold mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-2xl font-serif font-bold text-white mb-3">
-                  Connect With Us
-                </h3>
-                <p className="text-gray-200 mb-6">
-                  Have questions? We'd love to hear from you.
-                </p>
-                <span className="text-brand-gold font-semibold flex items-center">
-                  Get in Touch
-                  <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
+            {/* About Us Card */}
+            <div className="bg-brand-cream rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 group">
+              <div className="inline-flex items-center justify-center w-16 h-16 mb-4 text-brand-gold">
+                <BookOpenIcon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
               </div>
-            </Link>
+              <h3 className="text-2xl font-serif font-bold text-brand-dark-blue mb-3">
+                About Us
+              </h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Learn more about our mission, vision, beliefs, and the story of Grace Covenant Church.
+              </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center text-brand-gold hover:text-brand-dark-blue font-semibold transition-colors duration-300"
+              >
+                Learn More
+                <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
